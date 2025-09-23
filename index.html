@@ -24,21 +24,18 @@
     -->
     
     <style>
-        #emotiva-component-wrapper,
-        #emotiva-component-wrapper * {
-            /* Reset CSS potenziato per annullare gli stili di GitHub Pages e altre piattaforme. */
-            all: revert !important;
-        }
-
         #emotiva-component-wrapper {
             /* Contenitore protettivo per isolare il componente e risolvere i conflitti CSS. */
-            font-size: 16px !important;
-            box-sizing: border-box !important;
-            width: 100% !important;
-            max-width: none !important; /* Annulla eventuali restrizioni di larghezza dal sito genitore. */
+            /* Reset di base per il contenitore */
             margin: 0 !important;
             padding: 0 !important;
-            /* Stili prima applicati al body, ora applicati al wrapper per maggiore specificità */
+            width: 100% !important;
+            max-width: none !important; /* Annulla restrizioni di larghezza dal sito genitore */
+            text-align: left !important; /* Previene l'allineamento centrato ereditato */
+            font-size: 16px !important;
+            box-sizing: border-box !important;
+
+            /* Stili fondamentali del sito */
             font-family: 'Avenir Next', sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -46,10 +43,10 @@
             color: #111111;
         }
 
-        #emotiva-component-wrapper *, 
-        #emotiva-component-wrapper *:before, 
+        #emotiva-component-wrapper *,
+        #emotiva-component-wrapper *:before,
         #emotiva-component-wrapper *:after {
-            /* Assicura che tutti gli elementi ereditino il box-sizing corretto dal wrapper. */
+            /* Eredita il box-sizing corretto, senza resettare altri stili */
             box-sizing: inherit !important;
         }
 
