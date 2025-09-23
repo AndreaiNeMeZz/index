@@ -24,18 +24,38 @@
     -->
     
     <style>
-        #emotiva-component-wrapper {
-            /* Contenitore protettivo per isolare il componente e risolvere i conflitti CSS. */
-            /* Reset di base per il contenitore */
+        /* ==========================================================================
+        POTENZIAMENTO ANTI-CONFLITTO PER GITHUB PAGES E ALTRE PIATTAFORME
+        Queste regole forzano il layout corretto e prevengono che gli stili 
+        del tema di GitHub sovrascrivano i nostri.
+        ==========================================================================
+        */
+        html, body {
             margin: 0 !important;
             padding: 0 !important;
             width: 100% !important;
-            max-width: none !important; /* Annulla restrizioni di larghezza dal sito genitore */
-            text-align: left !important; /* Previene l'allineamento centrato ereditato */
+            max-width: none !important;
+            text-align: left !important;
+            background: #fff !important; /* Assicura uno sfondo bianco pulito */
+        }
+
+        /* Neutralizza il contenitore principale del tema di GitHub, se presente */
+        body > .main-content {
+            max-width: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        /*
+        ==========================================================================
+        FINE POTENZIAMENTO
+        ==========================================================================
+        */
+
+        #emotiva-component-wrapper {
+            /* Il wrapper ora si concentra sugli stili di base del FONT e del BOX-SIZING */
+            width: 100% !important;
             font-size: 16px !important;
             box-sizing: border-box !important;
-
-            /* Stili fondamentali del sito */
             font-family: 'Avenir Next', sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -48,10 +68,6 @@
         #emotiva-component-wrapper *:after {
             /* Eredita il box-sizing corretto, senza resettare altri stili */
             box-sizing: inherit !important;
-        }
-
-        body {
-            /* Questa regola è ora semplificata, poiché gli stili principali sono gestiti dal wrapper. */
         }
 
         .fade-in {
