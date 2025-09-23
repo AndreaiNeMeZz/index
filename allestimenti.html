@@ -82,12 +82,23 @@
     
     <main class="pt-24">
         <section class="relative h-[70vh] bg-black">
-             <img src="https://i.postimg.cc/8zN5fZFt/temp-Image-YGWazx.avif" alt="Allestimento fieristico Emotiva" class="w-full h-full object-cover object-center">
+            <picture class="w-full h-full block">
+                <!-- 
+                  NOTA: Sostituisci questi URL con i link alle tue immagini.
+                  Il browser sceglierà l'immagine più adatta in base alla larghezza dello schermo.
+                -->
+                <!-- Immagine per schermi grandi (desktop) > 1024px -->
+                <source media="(min-width: 1024px)" srcset="https://i.postimg.cc/8zN5fZFt/temp-Image-YGWazx.avif">
+                <!-- Immagine per schermi medi (tablet) > 640px -->
+                <source media="(min-width: 640px)" srcset="https://placehold.co/1200x800/1a1a1a/fff?text=Immagine+Tablet">
+                <!-- Immagine di default (mobile) e per browser che non supportano <picture> -->
+                <img src="https://placehold.co/600x900/1a1a1a/fff?text=Immagine+Mobile" alt="Allestimento fieristico Emotiva" class="w-full h-full object-cover object-center">
+             </picture>
              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
              <h1 class="absolute bottom-8 right-8 md:bottom-12 md:right-12 text-2xl md:text-2xl font-regular tracking-tight text-white">Allestimenti</h1>
         </section>
         <section class="py-20 md:py-32">
-            <div class="max-w-3xl mx-auto text-center">
+            <div class="max-w-5xl mx-auto text-center">
                 <h2 class="text-2xl md:text-3xl font-regular tracking-tight">Spazi che diventano esperienze.</h2>
                 <p class="mt-4 text-base text-gray-600 leading-relaxed">Creiamo spazi che raccontano storie, attirano sguardi e generano connessioni. Ogni stand è un progetto unico, cucito su misura per il brand per trasformare metri quadri in opportunità di business.</p>
             </div>
@@ -175,3 +186,6 @@
     </script>
 </body>
 </html>
+
+
+
