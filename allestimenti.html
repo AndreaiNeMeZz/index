@@ -9,6 +9,7 @@
         html, body {
             margin: 0 !important; padding: 0 !important; width: 100% !important; max-width: none !important;
             text-align: left !important; background: #fff !important;
+            font-size: 16px !important; /* Forza la dimensione del carattere di base per risolvere problemi di scaling */
         }
         body {
             font-family: 'Avenir Next', sans-serif;
@@ -79,8 +80,8 @@
         </div>
     </div>
     
-    <main class="pt-24"> <!-- Aggiunto padding-top per evitare che il contenuto finisca sotto l'header fisso -->
-        <section class="relative h-[70vh] bg-cover bg-center flex items-end justify-end p-8 md:p-12 text-white" style="background-image: url('https://i.postimg.cc/8zN5fZFt/temp-Image-YGWazx.avif')">
+    <main class="pt-24">
+        <section class="relative h-[70vh] bg-cover flex items-end justify-end p-8 md:p-12 text-white" style="background-image: url('https://i.postimg.cc/8zN5fZFt/temp-Image-YGWazx.avif'); background-position: top;">
              <h1 class="text-2xl md:text-2xl font-regular tracking-tight text-right">Allestimenti</h1>
         </section>
         <section class="py-20 md:py-32">
@@ -172,4 +173,3 @@
     </script>
 </body>
 </html>
-
