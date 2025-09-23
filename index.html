@@ -24,24 +24,31 @@
     -->
     
     <style>
-        html {
-            /* Isola questo componente dagli stili del sito genitore per evitare conflitti. */
-            font-size: 16px !important; /* Forza una dimensione di base per le unità 'rem' usate da Tailwind. */
+        #emotiva-component-wrapper {
+            /* Contenitore protettivo per isolare il componente e risolvere i conflitti CSS. */
+            font-size: 16px !important;
             box-sizing: border-box !important;
-        }
-
-        *, *:before, *:after {
-            /* Assicura che tutti gli elementi ereditino il box-sizing corretto. */
-            box-sizing: inherit !important;
-        }
-
-        body {
-            /* Assicura che Avenir Next sia il font primario. Se non disponibile, usa un sans-serif di sistema. */
+            width: 100% !important;
+            max-width: none !important; /* Annulla eventuali restrizioni di larghezza dal sito genitore. */
+            margin: 0 !important;
+            padding: 0 !important;
+            /* Stili prima applicati al body, ora applicati al wrapper per maggiore specificità */
             font-family: 'Avenir Next', sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             background-color: #ffffff;
             color: #111111;
+        }
+
+        #emotiva-component-wrapper *, 
+        #emotiva-component-wrapper *:before, 
+        #emotiva-component-wrapper *:after {
+            /* Assicura che tutti gli elementi ereditino il box-sizing corretto dal wrapper. */
+            box-sizing: inherit !important;
+        }
+
+        body {
+            /* Questa regola è ora semplificata, poiché gli stili principali sono gestiti dal wrapper. */
         }
 
         .fade-in {
@@ -148,6 +155,8 @@
     </style>
 </head>
 <body class="bg-white">
+
+<div id="emotiva-component-wrapper">
 
     <!-- Header Fisso e Minimale con Effetto Vetro -->
     <header id="header" class="fixed top-0 left-0 w-full z-30 p-5 md:p-8 flex justify-between items-center transition-all duration-300 border-b">
@@ -669,6 +678,8 @@
             </p>
         </div>
     </footer>
+
+</div> <!-- Chiusura del wrapper protettivo -->
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
