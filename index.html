@@ -49,6 +49,25 @@
 </head>
 <body class="bg-white">
 
+    <!-- Pannello Dettaglio Progetto -->
+    <div id="project-detail-panel" class="fixed inset-0 bg-white z-50 transform translate-y-full transition-transform duration-500 ease-in-out overflow-hidden">
+        <div class="h-full overflow-y-auto custom-scrollbar">
+            <div class="absolute top-8 right-5 md:top-8 md:right-8 z-10">
+                <button id="project-close" class="w-7 h-7 bg-black text-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                </button>
+            </div>
+            <div class="flex flex-col md:flex-row">
+                <div id="project-images-container" class="w-full md:w-1/2 bg-gray-100 p-5 md:p-8">
+                    <div id="project-images" class="space-y-6"></div>
+                </div>
+                <div class="w-full md:w-1/2 p-8 md:p-16">
+                    <div id="project-info" class="max-w-xl mx-auto"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Header Fisso e Minimale con Effetto Vetro -->
     <header id="header" class="fixed top-0 left-0 w-full z-30 p-5 md:p-8 flex justify-between items-center transition-all duration-300 border-b">
         <!-- Left: Menu Button -->
@@ -75,6 +94,7 @@
                 <div class="absolute top-full right-0 mt-2 w-28 bg-white shadow-lg rounded-md ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Italiano</a>
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">English</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Cinese</a>
                 </div>
             </div>
             <button id="contact-toggle" class="relative group h-8 flex items-center z-20 px-2 font-medium">
@@ -133,26 +153,86 @@
         <section class="bg-white pt-[200px] pb-[80px]"><div class="text-center"><h1 class="text-4xl md:text-7xl lg:text-9xl tracking-tighter"><span class="font-medium">metti un punto</span><span class="font-bold">.</span></h1></div></section>
         <section class="pb-24 md:pb-40 px-6"><div class="max-w-4xl mx-auto text-center fade-in"><h4 class="text-3xl md:text-3xl font-medium tracking-tight">La nostra tela per dare forma alla vostra visione.</h4><p class="mt-6 max-w-2xl mx-auto text-base text-gray-600 leading-relaxed">Il vostro brand per dar colore alle nostre idee.</p></div></section>
         <section class="px-5 md:px-8 pb-20 md:pb-32">
-            <div class="space-y-20 md:space-y-32">
-                <div class="w-full fade-in">
-                    <img src="https://www.emotivadesign.com/wp-content/uploads/2025/09/2-copia.png" alt="Allestimento per SOGEDIM" class="w-full h-auto object-cover mb-4">
-                    <div class="flex justify-between items-center"><h3 class="text-xl md:text-2xl font-medium">SOGEDIM</h3><a href="#" class="project-link text-base md:text-lg underline hover:opacity-70 transition-opacity">Scopri il progetto</a></div>
+            <div>
+                
+                <div class="w-full fade-in relative group">
+                    <img src="https://www.emotivadesign.com/wp-content/uploads/2025/06/Pharma-article.jpg" alt="Allestimento per SOGEDIM" class="w-full h-auto object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 md:p-8 text-white">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl md:text-2xl font-medium">SOGEDIM</h3>
+                            <a href="#" class="project-link text-base md:text-lg underline hover:opacity-70 transition-opacity text-white"
+                               data-title="SOGEDIM: Logistica in Movimento"
+                               data-description="<p class='text-base leading-relaxed mb-4'>Per SOGEDIM, la sfida era tradurre la complessità e l'efficienza della logistica moderna in un design che fosse allo stesso tempo accogliente e tecnologicamente avanzato.</p><h5 class='font-semibold text-xl mt-8 mb-3'>Il Concept</h5><p class='text-base leading-relaxed'>L'idea centrale è stata quella di creare un 'hub' visivo. Linee dinamiche sul pavimento e sulle pareti richiamano i flussi di merci, mentre aree lounge confortevoli simboleggiano i punti di incontro e di connessione. Abbiamo usato materiali come il metallo verniciato e il legno chiaro per bilanciare l'aspetto industriale con un tocco umano.</p>"
+                               data-images='["https://www.emotivadesign.com/wp-content/uploads/2025/09/2-copia.png", "https://placehold.co/800x600/f0f0f0/333?text=SOGEDIM+Dettaglio"]'>
+                               Scopri il progetto
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="w-full fade-in">
-                    <img src="https://placehold.co/1600x900/1a1a1a/ffffff?text=Progetto+PHARMAEXTRACTA" alt="Allestimento per PHARMAEXTRACTA" class="w-full h-auto object-cover mb-4">
-                    <div class="flex justify-between items-center"><h3 class="text-xl md:text-2xl font-medium">PHARMAEXTRACTA</h3><a href="#" class="project-link text-base md:text-lg underline hover:opacity-70 transition-opacity">Scopri il progetto</a></div>
+
+                <div class="w-full fade-in relative group">
+                    <img src="https://placehold.co/1600x900/1a1a1a/ffffff?text=Progetto+PHARMAEXTRACTA" alt="Allestimento per PHARMAEXTRACTA" class="w-full h-auto object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 md:p-8 text-white">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl md:text-2xl font-medium">PHARMAEXTRACTA</h3>
+                            <a href="#" class="project-link text-base md:text-lg underline hover:opacity-70 transition-opacity text-white"
+                               data-title="PHARMAEXTRACTA: Natura e Scienza"
+                               data-description="<p class='text-base leading-relaxed mb-4'>Il brief per Pharmaextracta era chiaro: comunicare rigore scientifico e naturalità del prodotto in un unico spazio. Un equilibrio delicato che abbiamo affrontato con un approccio quasi scultoreo.</p>"
+                               data-images='["https://placehold.co/1600x900/1a1a1a/ffffff?text=Progetto+PHARMAEXTRACTA"]'>
+                               Scopri il progetto
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="w-full fade-in">
-                    <img src="https://placehold.co/1600x900/1a1a1a/ffffff?text=Progetto+ILPRA" alt="Allestimento per ILPRA" class="w-full h-auto object-cover mb-4">
-                    <div class="flex justify-between items-center"><h3 class="text-xl md:text-2xl font-medium">ILPRA</h3><a href="#" class="project-link text-base md:text-lg underline hover:opacity-70 transition-opacity">Scopri il progetto</a></div>
+
+                <div class="w-full fade-in relative group">
+                    <img src="https://placehold.co/1600x900/1a1a1a/ffffff?text=Progetto+ILPRA" alt="Allestimento per ILPRA" class="w-full h-auto object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 md:p-8 text-white">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl md:text-2xl font-medium">ILPRA</h3>
+                            <a href="#" class="project-link text-base md:text-lg underline hover:opacity-70 transition-opacity text-white"
+                               data-title="ILPRA: Tecnologia e Affidabilità"
+                               data-description="<p class='text-base leading-relaxed mb-4'>Per ILPRA, leader nel packaging, l'obiettivo era mostrare la robustezza e la precisione dei macchinari in un contesto elegante e professionale.</p>"
+                               data-images='["https://placehold.co/1600x900/1a1a1a/ffffff?text=Progetto+ILPRA"]'>
+                               Scopri il progetto
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                 <div class="w-full fade-in">
-                    <img src="https://placehold.co/1600x900/1a1a1a/ffffff?text=Evento+Aziendale" alt="Evento Aziendale di Lusso" class="w-full h-auto object-cover mb-4">
-                    <div class="flex justify-between items-center"><h3 class="text-xl md:text-2xl font-medium">Evento Aziendale</h3><a href="#" class="project-link text-base md:text-lg underline hover:opacity-70 transition-opacity">Scopri il progetto</a></div>
+
+                <div class="w-full fade-in relative group">
+                    <img src="https://placehold.co/1600x900/1a1a1a/ffffff?text=Evento+Aziendale" alt="Evento Aziendale di Lusso" class="w-full h-auto object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 md:p-8 text-white">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl md:text-2xl font-medium">Evento Aziendale</h3>
+                            <a href="#" class="project-link text-base md:text-lg underline hover:opacity-70 transition-opacity text-white"
+                               data-title="Evento Corporate: Gala Dinner"
+                               data-description="<p class='text-base leading-relaxed mb-4'>Organizzare un evento significa creare un'atmosfera. Per questo gala dinner, l'obiettivo era un'eleganza senza tempo, un ambiente che favorisse il networking e lasciasse un ricordo memorabile.</p>"
+                               data-images='["https://placehold.co/1600x900/1a1a1a/ffffff?text=Evento+Aziendale"]'>
+                               Scopri il progetto
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                 <div class="w-full fade-in">
-                    <img src="https://placehold.co/1600x900/1a1a1a/ffffff?text=Showroom+MIKY+FERRARI" alt="Showroom MIKY FERRARI" class="w-full h-auto object-cover mb-4">
-                    <div class="flex justify-between items-center"><h3 class="text-xl md:text-2xl font-medium">MIKY FERRARI</h3><a href="#" class="project-link text-base md:text-lg underline hover:opacity-70 transition-opacity">Scopri il progetto</a></div>
+
+                <div class="w-full fade-in relative group">
+                    <img src="https://placehold.co/1600x900/1a1a1a/ffffff?text=Showroom+MIKY+FERRARI" alt="Showroom MIKY FERRARI" class="w-full h-auto object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 md:p-8 text-white">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl md:text-2xl font-medium">MIKY FERRARI</h3>
+                            <a href="#" class="project-link text-base md:text-lg underline hover:opacity-70 transition-opacity text-white"
+                               data-title="MIKY FERRARI: Showroom Sartoriale"
+                               data-description="<p class='text-base leading-relaxed mb-4'>Progettare uno showroom significa creare la casa di un brand. Per Miky Ferrari, abbiamo tradotto l'eleganza e l'artigianalità delle sue creazioni in un'architettura d'interni che fosse sia espositiva che intima.</p>"
+                               data-images='["https://placehold.co/1600x900/1a1a1a/ffffff?text=Showroom+MIKY+FERRARI"]'>
+                               Scopri il progetto
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -210,6 +290,37 @@
                 primaryMenuPanel.classList.remove('-translate-x-full');
                 servicesMenuPanel.classList.add('translate-x-full');
             });
+
+            // Logica per il Pannello Dettaglio Progetti
+            const projectDetailPanel = document.getElementById('project-detail-panel');
+            const projectLinks = document.querySelectorAll('.project-link');
+            const projectCloseBtn = document.getElementById('project-close');
+
+            projectLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const title = link.dataset.title;
+                    const description = link.dataset.description;
+                    const images = JSON.parse(link.dataset.images);
+
+                    if(projectDetailPanel) {
+                        projectDetailPanel.querySelector('#project-info').innerHTML = `<h2 class="text-4xl md:text-5xl font-bold tracking-tighter mb-8">${title}</h2>${description}`;
+                        projectDetailPanel.querySelector('#project-images').innerHTML = images.map(src => `<img src="${src}" alt="${title}" class="w-full h-auto object-cover">`).join('');
+                        
+                        projectDetailPanel.classList.remove('translate-y-full');
+                        openOverlay();
+                    }
+                });
+            });
+
+            if(projectCloseBtn) {
+                projectCloseBtn.addEventListener('click', () => {
+                    if(projectDetailPanel) {
+                        projectDetailPanel.classList.add('translate-y-full');
+                        closeAllPanels();
+                    }
+                });
+            }
         });
     </script>
 </body>
