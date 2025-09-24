@@ -16,6 +16,7 @@
             -moz-osx-font-smoothing: grayscale;
             background-color: #ffffff;
             color: #111111;
+            overflow-x: hidden; /* Previene lo scroll orizzontale causato dalla tecnica full-bleed */
         }
         .logo-text { font-weight: 500; font-size: 1.75rem; letter-spacing: -0.02em; }
         body.overflow-hidden { overflow: hidden; }
@@ -29,6 +30,12 @@
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-bottom-color: rgba(0, 0, 0, 0.07);
+        }
+        .full-bleed {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            margin-left: -50vw;
         }
     </style>
 </head>
@@ -130,8 +137,8 @@
             </div>
         </section>
 
-        <section class="pb-20 md:pb-32">
-            <div class="grid grid-cols-2">
+        <section class="pb-20 md:pb-32 full-bleed">
+            <div class="grid grid-cols-2 gap-0">
                 <div>
                     <img src="https://placehold.co/800x1000/e0e0e0/333?text=RENDER+1" alt="Render 1 del progetto" class="w-full h-full object-cover block">
                 </div>
@@ -215,6 +222,3 @@
     </script>
 </body>
 </html>
-
-
-
