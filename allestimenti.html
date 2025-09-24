@@ -9,7 +9,6 @@
         html, body {
             margin: 0 !important; padding: 0 !important; width: 100% !important; max-width: none !important;
             text-align: left !important; background: #fff !important;
-            font-size: 16px !important; /* Forza la dimensione del carattere di base per risolvere problemi di scaling */
         }
         body {
             font-family: 'Avenir Next', sans-serif;
@@ -24,19 +23,44 @@
         .faq-question.open + .faq-answer { max-height: 200px; }
         .faq-icon-wrapper svg:last-child { transition: opacity 0.3s ease-in-out; opacity: 0;}
         .faq-question.open .faq-icon-wrapper svg:last-child { opacity: 1; }
+
+        #header {
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom-color: rgba(0, 0, 0, 0.07);
+        }
     </style>
 </head>
 <body class="bg-white">
 
-    <header id="header" class="fixed bg-white top-0 left-0 w-full z-30 p-5 md:p-8 flex justify-between items-center transition-all duration-300 border-b">
+    <header id="header" class="fixed top-0 left-0 w-full z-30 p-5 md:p-8 flex justify-between items-center border-b">
         <button id="menu-toggle" aria-label="Menu" class="relative group w-8 h-8 flex items-center justify-center z-20">
-            <span class="w-5 flex flex-col justify-center items-center space-y-1.5"><span class="block w-full h-0.5 bg-black"></span><span class="block w-full h-0.5 bg-black"></span></span>
+             <span class="w-5 flex flex-col justify-center items-center space-y-1.5 transition-all duration-300 group-hover:opacity-0 group-hover:scale-75">
+                <span class="block w-full h-0.5 bg-black"></span>
+                <span class="block w-full h-0.5 bg-black"></span>
+            </span>
+            <span class="absolute w-2 h-2 bg-black rounded-full transition-all duration-300 opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100"></span>
         </button>
         <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
             <a href="index.html" class="logo-text">emotiva.</a>
         </div>
         <div class="flex items-center space-x-4 md:space-x-6">
-            <button id="contact-toggle" class="font-medium">Contattaci</button>
+             <div class="relative group">
+                <button class="flex items-center space-x-1.5 text-base font-medium">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802" /></svg>
+                    <span>IT</span>
+                </button>
+                <div class="absolute top-full right-0 mt-2 w-28 bg-white shadow-lg rounded-md ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Italiano</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">English</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Cinese</a>
+                </div>
+            </div>
+            <button id="contact-toggle" class="relative group h-8 flex items-center z-20 px-2 font-medium">
+                <span class="transition-all duration-300 group-hover:opacity-0 group-hover:scale-95">Contattaci</span>
+                <span class="absolute right-2 w-2 h-2 bg-black rounded-full transition-all duration-300 opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100"></span>
+            </button>
         </div>
     </header>
 
@@ -82,7 +106,7 @@
     
     <main class="pt-24">
         <section class="mb-16 relative">
-            <img src="https://raw.githubusercontent.com/AndreaiNeMeZz/index/refs/heads/main/Header%20allestimenti.png" alt="Allestimento fieristico Emotiva" class="w-full h-auto">
+            <img src="https://raw.githubusercontent.com/AndreaiNeMeZz/index/refs/heads/main/Header%20allestimenti.png$0" alt="Allestimento fieristico Emotiva" class="w-full h-auto">
             <h1 class="absolute bottom-8 right-8 text-white text-1xl font-regular tracking-tight" style="text-shadow: 1px 1px 4px rgba(0,0,0,0.6);">Allestimenti</h1>
         </section>
         <section class="py-10 md:py-16">
